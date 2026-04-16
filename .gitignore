@@ -1,0 +1,6 @@
+*.bin
+*.rar
+*.zip
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
