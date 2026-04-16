@@ -64,7 +64,6 @@ Place the `.bin` file in the `clustering/` folder before running.
 | `clustering/Clustering.py` | K-Means clustering on Word2Vec embeddings |
 | `clustering/Silhouette.py` | Silhouette score analysis for cluster validation |
 | `clustering/Front.py` | Streamlit GUI frontend |
-| `Final Report.pdf` | Full project report |
 
 ## How to Run
 
