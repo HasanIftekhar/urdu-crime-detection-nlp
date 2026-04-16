@@ -1,0 +1,11 @@
+SpeechRecognition
+gensim
+scikit-learn
+urduhack
+nltk
+googletrans==4.0.0-rc1
+tinytag
+streamlit
+pandas
+matplotlib
+seaborn

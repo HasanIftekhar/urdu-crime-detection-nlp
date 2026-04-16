@@ -21,7 +21,7 @@ from sklearn.cluster import KMeans
 
 def Sentiment_score(Final_text):
 
-    P_file = open('poisitive-words.ur.txt', "r", encoding='utf-8')   #Opening Positive urdu lexicons
+    P_file = open('positive-words.ur.txt', "r", encoding='utf-8')   #Opening Positive urdu lexicons
     P_content = P_file.read()
     P_list = P_content.split("\n")
     N_file = open('negative-words.ur.txt', "r", encoding='utf-8')  #Opening Negative urdu lexicons

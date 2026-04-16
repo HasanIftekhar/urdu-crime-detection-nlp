@@ -9,9 +9,13 @@ Built an end-to-end NLP pipeline for sentiment-based crime detection in Urdu —
 ## Pipeline
 
 ```
-Urdu Audio → Speech-to-Text (Google STT) → Text Preprocessing → 
+Urdu Audio → Speech-to-Text (Google STT) → Text Preprocessing →
 Word2Vec Embeddings → K-Means Clustering → Crime Classification
 ```
+
+## System Workflow
+
+![Workflow](Workflow%20(3.0).jpeg)
 
 ## Key Results
 
@@ -28,11 +32,11 @@ Word2Vec Embeddings → K-Means Clustering → Crime Classification
 - Scikit-learn (K-Means, Silhouette analysis)
 - UrduHack (Urdu NLP preprocessing)
 - NLTK
-- Tkinter (GUI)
+- Streamlit (GUI)
 
 ## Word2Vec Model
 
-The Urdu Word2Vec model (`urduvec_140M_100K_300d.bin`, ~119MB) is not included due to file size.
+The Urdu Word2Vec model (`urdu_wikipedia_vector300_word2vec_linguistic_variation_1.bin`, ~119MB) is not included due to file size.
 
 Download from: [Urdu Word Vectors — URDUVEC](https://github.com/jaleed96/urduvec)
 
@@ -55,15 +59,15 @@ Place the `.bin` file in the `clustering/` folder before running.
 | `Fyp Code.py` | Main STT pipeline — audio processing, translation, crime word detection |
 | `Sentiment Analysis.py` | NLP preprocessing — tokenization, lemmatization, Word2Vec |
 | `main.py` | Word2Vec model loading and vector testing |
-| `clustering/Clustring.py` | K-Means clustering on Word2Vec embeddings |
-| `clustering/Shihouette.py` | Silhouette score analysis for cluster validation |
-| `clustering/Front.py` | GUI frontend (Tkinter) |
-
+| `clustering/Clustering.py` | K-Means clustering on Word2Vec embeddings |
+| `clustering/Silhouette.py` | Silhouette score analysis for cluster validation |
+| `clustering/Front.py` | Streamlit GUI frontend |
+| `Final Report.pdf` | Full project report |
 
 ## How to Run
 
 ```bash
-pip install SpeechRecognition gensim scikit-learn urduhack nltk googletrans tinytag
+pip install -r requirements.txt
 
 # Test Word2Vec embeddings
 python main.py
@@ -72,7 +76,10 @@ python main.py
 python "Fyp Code.py"
 
 # Run clustering
-python clustering/Clustring.py
+python clustering/Clustering.py
+
+# Launch Streamlit GUI
+streamlit run clustering/Front.py
 ```
 
-> Requires Google Speech API access and the Urdu Word2Vec `.bin` model in `clustering/`.
+> Requires Google Speech API access and the Urdu Word2Vec `.bin` model placed in `clustering/`.
