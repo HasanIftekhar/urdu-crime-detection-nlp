@@ -51,6 +51,8 @@ Place the `.bin` file in the `clustering/` folder before running.
 | `Crime.csv` | Crime classification labels |
 | `clustering/SpeechToText.csv` | STT output for training |
 | `clustering/SpeechToText_TESTING.csv` | STT output for testing |
+| `clustering/2DREP.csv` | 2D vector projections of training embeddings (for visualization) |
+| `clustering/2DREP_TESTING.csv` | 2D vector projections of test embeddings (for visualization) |
 
 ## Files
 
